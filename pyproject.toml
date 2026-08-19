@@ -1,0 +1,21 @@
+[project]
+name = "mavlink-web-bridge"
+version = "0.1.0"
+description = "MAVLink-to-Web-API bridge for vessel position/heading (SSAD-531)"
+readme = "README.md"
+authors = [
+    { name = "AilsaXu", email = "ailsa.xu@valtec.ai" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pymavlink>=2.4.42",
+]
+
+[project.scripts]
+mavlink-web-bridge = "mavlink_web_bridge:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
