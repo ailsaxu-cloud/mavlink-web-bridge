@@ -13,9 +13,6 @@ dependencies = [
     "pymavlink>=2.4.42",
 ]
 
-[project.scripts]
-mavlink-web-bridge = "mavlink_web_bridge:main"
-
 [build-system]
 requires = ["uv_build>=0.12.1,<0.13.0"]
 build-backend = "uv_build"
