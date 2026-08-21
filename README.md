@@ -63,12 +63,12 @@ do **not** Ctrl+C or exit, that kills the sim):
 tmux attach -t vessel_sitl:0
 ```
 
-Sanity-check the raw MAVLink feed without any of this project's code, using
-the standalone sniffer at `~/Work/tools/mavlink_sniffer.py`:
+Sanity-check the MAVLink feed without any of this project's code, using the
+standalone sniffer at `~/Work/tools/mavlink_sniffer.py` (see its own README
+for the full list of categories):
 
 ```bash
-uv run /Users/ailsaxu/Work/tools/mavlink_sniffer.py --connection udp:127.0.0.1:14550
-uv run /Users/ailsaxu/Work/tools/mavlink_sniffer.py --connection udp:127.0.0.1:14550 --type GLOBAL_POSITION_INT
+uv run /Users/ailsaxu/Work/tools/mavlink_sniffer.py --connection udp:127.0.0.1:14550 --show heartbeat --show position
 ```
 
 ### 2. Start the FastAPI service (Step 2)
